@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Poppins', sans-serif;
+}
+#heading_bar{
+	position: relative;
+	height: 200px;
+	background-image: url('../bg/bg2.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.blur_main{
+	filter: blur(10px);
+}
+#child{
+	position: absolute;
+	background-color: black;
+	height: 100%;
+	width: 100%;
+	filter: opacity(50%);
+}
+#heading{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-weight: 700;
+	font-size: 4vw;
+}
+#data_container{
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	justify-content: center;
+}
+.box{
+	width: 250px;
+	background-color: #f8f9fa;
+	margin: 20px;
+	border-radius: 5px;
+	transition: all .2s;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.box:hover{
+	background-color: #FFF8E8;
+	transform: scale(1.050);
+}
+#rupee_icon{
+	font-size: 25px;
+}
+#rupee{
+	font-size: 30px;
+}
+.transfer_btn{
+	background-color: #085f63;
+	font-weight: 500;
+	color: white;
+}
+.transfer_btn:focus{
+	outline: none!important;
+	box-shadow: none!important;
+}
+
+#popup{
+	width: 400px;
+	background-color: #FFF8E8;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+	display: none;
+}
+#from,#to{
+	width: 15%;
+}
+#fromGmailText, #toGmailText{
+	background-color: white;
+	border-style: none;
+	width: 85%;
+}
+#amount{
+	width: 40%;
+}
+#transferAmountText,#totalTransferAmountText{
+	background-color: white;
+	border-style: none;
+	width: 60%;
+}
+
+
+#fromGmailText:hover{
+	cursor: not-allowed;
+}
+#fromGmailText:focus,#toGmailText:focus,#transferAmountText:focus,#totalTransferAmountText:focus,#finalTransferButton:focus{
+	outline: none!important;
+	box-shadow: none!important;
+}
+
+#finalTransferButton{
+	background-color: #085f63;
+	font-weight: 500;
+	color: white;
+}
+#cancelTransect{
+	cursor: pointer;
+}
+#cancelTransect:hover{
+	color: red;
+}
+#successPopUp{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 320px;
+	width: 350px;
+	background-color: white;
+	border-radius: 10px;
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+#gifContainer{
+	height: 45%;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #139900;
+	font-size: 150px;
+	background-size: 100% 100%;
+}
+#successText{
+	font-size: 25px;
+	z-index: 1111;
+}
+#successPopupCloseButton{
+	margin: 10px;
+	background-color: #085f63;
+	color: white;
+}
